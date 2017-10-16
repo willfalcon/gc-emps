@@ -1,0 +1,670 @@
+/*
+Theme Name: Good Citizen Employees
+Theme URI: https://willhawks.com/wordpress/gc-employees
+Author: Will Hawks
+Author URI: https://willhawks.com
+Description: Theme built for the employee section of the Good Citizen Website.
+Version: 1.4.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gc-employees
+*/
+
+
+/*
+  Contents
+
+    - Login
+    - Dashboard
+    - Schedule
+    - Staff
+    - Timesheets
+    - Utilities
+
+  */
+
+
+body, html, .container-fluid {
+  height: 100%;
+}
+
+body {
+  background-color: #F7F9FC;
+  color: #000;
+}
+
+
+/*===============*/
+/*===  Login  ===*/
+/*===============*/
+
+.gc-emp-login-logo {
+
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+}
+
+.gc-emp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .75);
+  max-width: 75%;
+  width: 450px;
+  min-height: 322px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2%;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #aaa;
+  text-align: center;
+}
+
+.gc-login-failed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+
+.gc-login-failed > p {
+  margin-bottom: 0px;
+}
+
+.gc-login-failed > button.close {
+  position: inherit;
+}
+
+.gc-emp-card-loggedin {
+  padding: 7%;
+  margin-top: 12%;
+}
+
+.gc-emp-password {
+  text-align: center;
+  background-color: rgba(255, 255, 255, .75);
+  -webkit-text-security: disc;
+}
+
+.gc-login-btn {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  min-width: 100px;
+  width: inherit;
+  background-color: rgba(255, 255, 255, .75);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-emp-card .form-control {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/*===================*/
+/*===  Dashboard  ===*/
+/*===================*/
+
+.gc-navbar {
+  background-color: #fff;
+  box-shadow: 1px 1px 2px #aaa;
+  justify-content: flex-end;
+}
+
+.gc-exit-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.gc-exit-button {
+  background-color: transparent;
+  color: #6B6B6A;
+  border: none;
+  padding: 0px;
+}
+
+.gc-emp-nav-logo {
+  width: 150px;
+  max-width: 100%;
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+
+.gc-card {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #aaa;
+  background-color: #fff;
+  color: #6B6B6A;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+.gc-emp-dashboard {
+  background-color: #fff;
+  max-width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 4px;
+  color: #6B6B6A;
+}
+
+.gc-dash-left {
+  padding-top: 10px;
+  padding-bottom: 500px;
+  padding-left: 11px;
+}
+
+a.list-group-item {
+  padding-left: .75rem;
+  color: inherit;
+}
+
+.gc-dash-center {
+  margin-top: 15px;
+}
+.gc-dash-right {
+  margin-top: 15px;
+}
+
+.gc-clock-in-out-container {
+  padding: 1rem;
+}
+
+
+.gc-clock-btn {
+  width: 105px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gc-dash-left .list-group-item,
+.gc-dash-right .list-group-item {
+  border: 0px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.gc-dash-left .list-group-item:first-child,
+.gc-dash-right .list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.gc-admin-menu-item {
+  padding-left: .75rem;
+}
+
+.gc-dashboard-module {
+  padding: 1rem;
+}
+
+.gc-schedule-toggle {
+  padding: .25rem .75rem;
+}
+
+
+.gc-schedule-list {
+  display: flex;
+  align-items: center;
+}
+
+.gc-date-block {
+    width: 50px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.gc-date-block-bottom {
+    background-color: #BA7337;
+    color: #fff;
+}
+
+.gc-request-block {
+    width: 100%;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.gc-req-block-off {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.gc-req-block-work {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.gc-schedule-item {
+    margin-left: 10px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 800px;
+      margin-top: 10%;
+  }
+}
+
+ .gc-modal-title {
+   max-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .gc-request-link {
+   display: block;
+   line-height: 1.25;
+   padding: .5rem .75rem;
+   margin-top: .75rem;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 30%;
+ }
+
+ .gc-add-edit-btn {
+   margin-left: 1.25rem;
+   margin-top: 1rem;
+ }
+
+ .gc-card-emp-schedule {
+   margin-top: 15px;
+ }
+
+ .gc-bulletin-excerpt {
+   margin-bottom: 0px;
+ }
+
+.gc-bulletin-more-btn {
+  display: block;
+  width: 70px;
+  max-width: 100%;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-bottom: .4rem;
+  padding-left: .9rem;
+  padding-right: .9rem;
+  text-decoration: underline;
+}
+
+.gc-bulletin-new-btn {
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: .4rem .9rem;
+}
+
+/*================*/
+/*=== Schedule ===*/
+/*================*/
+
+.gc-schedule-editor > div.acf-input {
+  max-width: 100%;
+}
+
+.gc-schedule-editor > div.acf-input > div > table > thead > tr > th.acf-th {
+  text-align: center;
+}
+
+.gc-schedule-editor > div > div > table > tbody > tr > td.acf-field-group {
+  padding: 0px;
+}
+
+.gc-schedule-editor > div > div > table > tbody > tr > td.acf-field-group > div > div > div.acf-field-date-picker {
+  padding: 5px;
+}
+
+.gc-schedule-editor > div > div > table > tbody > tr > td.acf-field-group > div > div > div.acf-field-date-picker {
+  text-align: center;
+}
+
+input.hasDatepicker {
+  text-align: center;
+}
+
+div.acf-field-repeater {
+  padding: 0px;
+}
+
+.gc-emp-error {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.gc-add-week {
+  grid-column: 1/2;
+}
+
+.gc-week-header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-schedule-main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*.gc-schedule-main-admin {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr) 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: .5rem;
+}*/
+
+.gc-schedule-week {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: .7rem;
+}
+
+.gc-schedule-week-admin {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr) 1fr;
+  grid-gap: .5rem;
+}
+
+.gc-sched-day {
+  font-size: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gc-sched-day > * {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.gc-sched-day-head > h5 {
+  font-size: 18px;
+}
+
+button.gc-edit-week {
+  color: rgb(107, 107, 106);
+}
+
+.gc-shifts-modal {
+  max-width: 600px;
+}
+
+.gc-sched-shifts {
+  padding: 5px;
+}
+
+.gc-sched-shifts > form.acf-form > div.acf-fields > div.acf-field > div.acf-label {
+  display: none;
+}
+
+.gc-sched-shifts table.acf-table,
+.gc-sched-shifts table.acf-table * {
+  border-width: 0px;
+  border-style: none;
+  text-align: center;
+}
+
+.gc-sched-shifts table.acf-table > thead > tr > th:nth-child(2),
+.gc-sched-shifts table.acf-table > tbody > tr > td:nth-child(2) * {
+  text-align: left;
+}
+
+.gc-sched-shifts table.acf-table > tbody > tr.acf-row > td > div.acf-input {
+  box-shadow: 0 1px 2px #aaa;
+  border-radius: 2px;
+}
+
+.gc-sched-shifts table.acf-table > tbody > tr.acf-row > td > div.acf-input * {
+  height: 40px;
+}
+
+.gc-sched-shifts table.acf-table > tbody > tr.acf-row > td > div.acf-input span.select2-selection__rendered {
+  display: flex;
+  align-items: center;
+}
+
+.gc-sched-shifts table.acf-table > tbody > tr.acf-row > td.acf-field-time-picker > div.acf-input {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-sched-shifts table.acf-table > tbody > tr.acf-row > td.acf-row-handle.remove {
+  background: #fff;
+}
+
+.gc-sched-shifts .acf-repeater .acf-row-handle .acf-icon.-minus {
+  display: block;
+  background: #dc3545;
+  color: #fff;
+}
+
+.acf-tooltip.-confirm a.-red {
+  color: #dc3545;
+}
+
+.acf-tooltip.-confirm {
+  font-size: 16px;
+  left: 639px !important;
+}
+
+.gc-sched-shifts div.acf-actions > a.acf-button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+  transition: all .15s ease-in-out;
+  color: #868e96;
+  background-color: transparent;
+  background-image: none;
+  border-color: #868e96;
+  -webkit-appearance: button;
+  overflow: visible;
+}
+
+span.select2-search--dropdown {
+  display: none;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_second {
+  display: none;
+}
+
+.acf-field-date-picker {
+  border-top-width: 0px !important;
+}
+
+.acf-field-date-picker > div.acf-label {
+  text-align: center;
+}
+
+
+#new_week_form > .acf-form-fields,
+.gc-edit-week-modal form.acf-form > .acf-form-fields {
+  display: grid;
+  grid-template-columns:  repeat(5, 1fr);
+}
+
+#new_week_form .acf-field--post-title,
+.gc-edit-week-modal form.acf-form .acf-field--post-title {
+  grid-column: 1/6;
+}
+
+#new_week_form .acf-field--post-title .acf-input-wrap,
+#new_week_form .acf-date-picker,
+.gc-edit-week-modal form.acf-form .acf-field--post-title .acf-input-wrap,
+.gc-edit-week-modal form.acf-form .acf-date-picker {
+  box-shadow: 0 1px 2px #aaa;
+  border-radius: 2px;
+}
+
+#new_week_form .acf-field--post-title .acf-input-wrap > input,
+#new_week_form .acf-date-picker > input,
+.gc-edit-week-modal form.acf-form .acf-field--post-title .acf-input-wrap > input,
+.gc-edit-week-modal form.acf-form .acf-date-picker > input {
+  height: 40px;
+}
+
+.ui-timepicker-container.ui-timepicker-standard {
+  z-index: 1051 !important;
+}
+
+.gc-time-input {
+  max-width: 150px;
+}
+
+.acf-form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gc-day-schedule {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "gc-day-sched-emp gc-day-sched-from gc-day-sched-to";
+  padding: 1rem;
+}
+
+.gc-day-sched-from, .gc-day-sched-from {
+  text-align: center;
+}
+
+.modal-body {
+  color: rgb(107, 107, 106);
+}
+
+
+/*=============*/
+/*=== Staff ===*/
+/*=============*/
+
+.gc-emp-profile {
+  padding: 3%;
+}
+
+form.acf-form > div.acf-fields > div.acf-field-text > div.acf-input,
+form.acf-form > div.acf-fields > div.acf-field-number > div.acf-input,
+form.acf-form > div.acf-fields > div.acf-field-email > div.acf-input {
+  box-shadow: 0 1px 2px #aaa;
+  border-radius: 2px;
+}
+
+form.acf-form > div.acf-fields > div.acf-field-text input,
+form.acf-form > div.acf-fields > div.acf-field-number input,
+form.acf-form > div.acf-fields > div.acf-field-email input {
+  height: 40px;
+}
+
+.acf-fields > .acf-field {
+  border-style: none !important;
+}
+
+.acf-field-true-false {
+  display: flex;
+}
+
+.acf-field-true-false > div.acf-label {
+  margin-right: 10px;
+}
+
+.gc-staff-list-item {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.gc-emp-pic {
+  display: block;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-emp-list-name {
+  margin-top: .5rem;
+  margin-left: 5px;
+  color: #6B6B6A;
+}
+
+.gc-emp-collapse {
+  margin-bottom: 10px;
+}
+
+.gc-edit-emp-btn {
+  display: block;
+  max-with: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-new-emp {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gc-delete-emp {
+  display: flex;
+  justify-content: center;
+}
+.gc-delete-emp-btn {
+}
+
+
+/*==================*/
+/*=== Timesheets ===*/
+/*==================*/
+
+.gc-timesheet-main {
+
+}
+
+.gc-time-btn {
+  width: 100%;
+}
+
+/*=================*/
+/*=== Utilities ===*/
+/*=================*/
+
+.gc-mt-15 {
+  margin-top: 15px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.maxwidth-100 {
+  max-width: 100%;
+}
