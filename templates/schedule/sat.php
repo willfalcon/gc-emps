@@ -3,6 +3,7 @@
   $rawDate = get_field( 'sat_date', false, false );
 
   $month = gcGetFullMonth( $rawDate );
+  $month = substr($month, 0, 3) . '<span class="mobile-hide">' . substr($month, 3) . '</span>';
 
 ?>
 
@@ -58,9 +59,9 @@
 
 <button type="button" data-toggle="modal" data-target="#sched-modal-<?php echo $rawDate; ?>">
 
-  <div class="gc-card gc-sched-day">
+  <div class="gc-sched-day">
 
-    <h5>Saturday</h5>
+    <h5 class="mobile-hide">Saturday</h5>
     <h6><?php echo $month; ?></h6>
     <p><?php the_field( 'sat_date' ); ?></p>
 
