@@ -21,11 +21,11 @@
 
         <div class="col-10 px-0">
 
-              <nav class="navbar navbar-light gc-navbar">
+              <nav class="navbar navbar-light gc-navbar sticky-top">
                 <div class="gc-exit-container">
                     <a href="<?php echo wp_logout_url( home_url() ); ?>" class="gc-exit-button btn btn-danger"><i class="fa fa-times fa-2x"></i></a>
                 </div>
               </nav>
 
 
-          <div class="row px-4">
+          <div class="row px-2 px-md-4">

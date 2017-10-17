@@ -47,8 +47,8 @@ $staffQuery = new WP_User_Query( $staffArgs );
                   <img src="<?php echo $pic['url']; ?>" alt="<?php echo $pic['alt']; ?>" class="img-fluid rounded-circle gc-emp-pic"/>
                 </div>
               <?php endif; ?>
-              <?php if ( get_field( 'phone', $acfEmpID ) ) : ?><p class="pl-5 pt-5"><b>Phone:</b> <?php the_field( 'phone', $acfEmpID ); ?></p><?php endif; ?>
-              <?php if ( get_field( 'email', $acfEmpID ) ) : ?><p class="pl-5"><b>Email:</b> <?php the_field( 'email', $acfEmpID ); ?></p><?php endif; ?>
+              <?php if ( get_field( 'phone', $acfEmpID ) ) : ?><p class="pl-md-5 pt-5"><b>Phone:</b> <?php the_field( 'phone', $acfEmpID ); ?></p><?php endif; ?>
+              <?php if ( get_field( 'email', $acfEmpID ) ) : ?><p class="pl-md-5"><b>Email:</b> <?php the_field( 'email', $acfEmpID ); ?></p><?php endif; ?>
 
               <?php if ( $isAdmin ) : ?>
                 <div class="width-100">

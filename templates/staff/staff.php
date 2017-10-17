@@ -1,9 +1,9 @@
 <?php
 
   if ( isset( $_POST['emp_to_delete'] ) ) {
-
+    require_once( ABSPATH . 'wp-admin/includes/user.php' );
     $empToDelete = $_POST['emp_to_delete'];
-    wp_delete_post( $empToDelete );
+    wp_delete_user( $empToDelete );
 
   }
 
@@ -14,14 +14,14 @@
 
 ?>
 
-<div class="col-6">
+<div class="col-12 col-md-6">
 
   <?php get_template_part( '/templates/staff/my-info' ); ?>
 
 </div>
 
 
-<div class="col-6">
+<div class="col-12 col-md-6">
 
   <?php
 

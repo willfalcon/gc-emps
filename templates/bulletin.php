@@ -10,7 +10,7 @@
 
 ?>
 
-<div class="gc-dashboard-module gc-card mt-4">
+<div class="gc-dashboard-module gc-card mt-4 mt-xl-0">
 
   <h3 class="text-center mb-4">Bulletin</h3>
 

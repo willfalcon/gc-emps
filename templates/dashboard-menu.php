@@ -1,4 +1,4 @@
-<div class="gc-dash-left gc-card">
+<div class="gc-dash-left sticky-top gc-card">
 
   <div class="gc-emp-nav-logo navbar-brand">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-black.png" alt="Good Citizen Logo" class="img-fluid">
@@ -15,15 +15,15 @@
 
     ?>
 
-    <a class="list-group-item" href="dashboard"><i class="fa fa-tachometer fa-lg"></i>  Dashboard</a>
+    <a class="list-group-item" href="dashboard"><i class="fa fa-tachometer fa-lg"></i><span class="mobile-hide">  Dashboard</a></span>
 
-    <a class="list-group-item" href="schedule"><i class="fa fa-calendar fa-lg"></i>  Schedule</a>
+    <a class="list-group-item" href="schedule"><i class="fa fa-calendar fa-lg"></i><span class="mobile-hide">  Schedule</span></a>
 
-    <a class="list-group-item" href="staff"><i class="fa fa-users fa-lg"></i>  Staff</a>
+    <a class="list-group-item" href="staff"><i class="fa fa-users fa-lg"></i><span class="mobile-hide">  Staff</span></a>
 
     <?php if ( $isAdmin ) : ?>
 
-      <a class="list-group-item" href="timesheets"><i class="fa fa-table fa-lg"></i>  Timesheets</a>
+      <a class="list-group-item" href="timesheets"><i class="fa fa-table fa-lg"></i><span class="mobile-hide">  Timesheets</span></a>
 
     <?php endif; ?>
 
